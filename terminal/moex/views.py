@@ -8,9 +8,9 @@ def index(request):
     return render(request, template)
 
 
-# Страница со списком мороженого
 def moex_list(request):
-    return HttpResponse('Список мороженого')
+    template = 'moex/moex.html'
+    return render(request, template)
 
 
 def group_companies(request):

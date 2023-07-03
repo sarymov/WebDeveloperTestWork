@@ -1,28 +1,33 @@
 # WebDeveloperTestWork
-WebDeveloperTestWork
 
-# Проект Foodgram
+# Тестовое задание
 
 ### Описание
-Проект "Foodgram" – это "продуктовый помощник". На этом сервисе авторизированные пользователи могут публиковать рецепты, подписываться на публикации других пользователей, добавлять понравившиеся рецепты в список «Избранное». Для неавторизированных пользователей доступны просмотр рецептов и страниц авторов.
+Тестовое задание для WEB разработчиков
 
-Проект запущен по адресу: http://158.160.107.15/
-
-Админка
-Login: admin
-Password: admin
-mail: admin@admin.ru
+Есть html приложения, API, тесты и само приложение
+(Сделал в силу ограниченного времени и возможностей)
 
 ### Как запустить проект на боевом сервере:
 
-Установить на сервере docker и docker-compose. Скопировать на сервер файлы docker-compose.yaml и default.conf:
+Установка:
 
 ```
-scp docker-compose.yml <логин_на_сервере>@<IP_сервера>:/home/sarymov/docker-compose.yml
-scp nginx.conf <логин_на_сервере>@<IP_сервера>:/home/sarymov/nginx/nginx.conf
+python -m venv venv
+source venv/Scripts/activate
+
+Обновить pip:
+python -m pip install --upgrade pip
+
+Установить зависимости из файла requirements.txt:
+
+pip install -r requirements.txt
+
+Выполнить миграции:
+python manage.py migrate
+
+Запустить проект:
+python manage.py runserver
 
 ```
 
-Добавить в Secrets на Github следующие данные:
-
-```

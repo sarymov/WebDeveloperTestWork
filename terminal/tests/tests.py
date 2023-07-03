@@ -1,15 +1,6 @@
 import pytest
 import json
-from flask import Flask
 from flask.testing import FlaskClient
-from server import app
-
-
-@pytest.fixture
-def client() -> FlaskClient:
-    app.config['TESTING'] = True
-    with app.test_client() as client:
-        yield client
 
 
 def test_get_orders(client):
